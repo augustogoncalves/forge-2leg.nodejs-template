@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Autodesk Forge - NodeJS - Template</title>
+  <!-- Common packages: JQuery & Bootstrap -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <script language="JavaScript" src="/js/jquery.min.js"></script>
+  <script language="JavaScript" src="/js/bootstrap.min.js"></script>
+  <script language="JavaScript" src="/js/notify.min.js"></script>
+  <!-- Autodesk Forge Viewer files -->
+  <link rel="stylesheet" href="https://developer.api.autodesk.com/viewingservice/v1/viewers/style.min.css" type="text/css">
+  <script language="JavaScript" src="https://developer.api.autodesk.com/viewingservice/v1/viewers/three.min.js"></script>
+  <script language="JavaScript" src="https://developer.api.autodesk.com/viewingservice/v1/viewers/viewer3D.min.js"></script>
+  <!-- this project main script -->
+  <link rel="stylesheet" href="/css/main.css"/>
+  <script language="JavaScript" src="/js/viewer.js"></script>
+  <script language="JavaScript" src="/js/forge.js"></script>
+</head>
+<body>
+<!-- Fixed navbar by Bootstrap: https://getbootstrap.com/examples/navbar-fixed-top/ -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav left">
+      <li>
+        <a href="http://developer.autodesk.com" target="_blank">
+          <img alt="Autodesk Forge" src="/img/autodesk-forge.png" height="20">
+          Autodesk Forge
+        </a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <div class="dropdown" style="padding-top: 10px; padding-right: 50px">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">View Models
+            <span class="caret"></span></button>
+          <ul class="dropdown-menu" id="filesToView">
+            <li class="dropdown-header">Sample files</li>
+            <li><a href="#" onclick="upload('Napa.rvt')">House (29mb)</a></li>
+            <li><a href="#" onclick="upload('Engine.dwfx')">Engine (4mb)</a></li>
+            <li><a href="#" onclick="upload('Suspension.dwf')">Car suspension (4mb)</a></li>
+            <li><a href="#" onclick="upload('seat.dwf')">Car seat (2mb)</a></li>
+            <li class="dropdown-header">Upload your file</li>
+            <li><a href="#" id="menuUploadFile"><img src="img/upload.png" height="16"/> Upload a file</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- End of navbar -->
+<div id="forgeViewer" class="forgeviewer"></div>
+<form id="uploadFile" method='post' enctype="multipart/form-data">
+  <input id="hiddenUploadField" type="file" name="theFile" style="visibility:hidden"/>
+</form>
+</body>
+</html>
