@@ -16,6 +16,8 @@
 // UNINTERRUPTED OR ERROR FREE.
 /////////////////////////////////////////////////////////////////////
 
+var viewer;
+
 function launchViewer(div, urn) {
   console.log("Launching Autodesk Viewer for: " + urn);
   var options = {
@@ -58,6 +60,7 @@ function loadDocument(documentId){
           */
         });
         viewer.load(doc.getViewablePath(geometryItems[0])); // show 1st view on this document...
+        viewer.loadExtension('Autodesk.ADN.Viewing.Extension.MyExtension', '');
       }
     },
     function (errorMsg) { // onErrorCallback
