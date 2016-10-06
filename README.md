@@ -12,7 +12,7 @@
 
 # Description
 
-This template (or boiler plate) implements a basic infrastrucutre for [Autodesk Forge 2 Legged OAuth](https://developer.autodesk.com/en/docs/oauth/v2/tutorials/get-2-legged-token/) with NodeJS. The front-end will look like:
+This template (or boiler plate) implements a basic infrastructure for [Autodesk Forge 2 Legged OAuth](https://developer.autodesk.com/en/docs/oauth/v2/tutorials/get-2-legged-token/) with NodeJS. The front-end will look like:
 
 ![](www/img/indexpage.png)
 
